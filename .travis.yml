@@ -3,16 +3,11 @@ language: java
 jdk:
   - oraclejdk8
 
-install:
-    - git clone --depth 1 https://github.com/ghdl/ghdl.git ghdl
-    - cd ghdl
-    - mkdir build-mcode
-    - cd build-mcode
-    - ../configure --prefix=PREFIX
-    - make
-    - make install
-    - cd ../../
-    - export PATH=$PATH:install-ghdl-mcode/bin/
+addons:
+      apt:
+        packages:
+- gnat
+
 
 script: mvn clean install
 
