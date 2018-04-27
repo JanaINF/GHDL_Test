@@ -4,8 +4,20 @@ jdk:
   - oraclejdk8
 
 before-install:
+    - sudo apt-get -qq update
     - sudo apt-get install gnat
 
+install:
+    - cd /usr/local
+    - git clone --depth 1 https://github.com/ghdl/ghdl.git ghdl
+    - cd ghdl
+    - mkdir build-mcode
+    - cd build-mcode
+    - ../configure --prefix=../../install-ghdl-mcode/
+    - make
+    - make install
+    - cd ../../
+    - export PATH=$PATH:install-ghdl-mcode/bin/
 
 script: mvn clean install
 
