@@ -8,7 +8,7 @@ install:
     - cd ghdl
     - mkdir build-mcode
     - cd build-mcode
-    - ../configure --prefix=../../install-ghdl-mcode/
+    - ../configure --prefix=PREFIX
     - make
     - make install
     - cd ../../
