@@ -3,12 +3,10 @@ language: java
 jdk:
   - oraclejdk8
 
-before-install:
-    - sudo apt-get -qq update
-    - sudo apt-get install gnat
 
 install:
-
+    - sudo apt-get -qq update
+    - sudo apt-get install gnat
     - git clone --depth 1 https://github.com/ghdl/ghdl.git ghdl
     - cd ghdl
     - mkdir build-mcode
