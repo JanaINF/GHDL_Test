@@ -3,9 +3,7 @@ language: java
 jdk:
   - oraclejdk8
 
-script: mvn clean install
-
-before-script:
+install:
     - git clone --depth 1 https://github.com/ghdl/ghdl.git ghdl
     - cd ghdl
     - mkdir build-mcode
@@ -15,3 +13,6 @@ before-script:
     - make install
     - cd ../../
     - export PATH=$PATH:install-ghdl-mcode/bin/
+
+script: mvn clean install
+
