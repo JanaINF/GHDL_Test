@@ -8,7 +8,7 @@ before-install:
     - sudo apt-get install gnat
 
 install:
-    - cd /usr/local
+
     - git clone --depth 1 https://github.com/ghdl/ghdl.git ghdl
     - cd ghdl
     - mkdir build-mcode
