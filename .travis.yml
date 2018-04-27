@@ -4,3 +4,14 @@ jdk:
   - oraclejdk8
 
 script: mvn clean install
+
+before-script:
+    - git clone --depth 1 https://github.com/ghdl/ghdl.git ghdl
+    - cd ghdl
+    - mkdir build-mcode
+    - cd build-mcode
+    - ../configure --prefix=../../install-ghdl-mcode/
+    - make
+    - make install
+    - cd ../../
+    - export PATH=$PATH:install-ghdl-mcode/bin/
