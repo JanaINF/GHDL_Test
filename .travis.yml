@@ -9,13 +9,23 @@ install:
     - sudo apt-get install gnat
     - git clone --depth 1 https://github.com/ghdl/ghdl.git ghdl
     - cd ghdl
-    - mkdir build-mcode
-    - cd build-mcode
-    - ../configure --prefix=../../install-ghdl-mcode/
-    - make
-    - make install
-    - cd ../../
-    - export PATH=$PATH:install-ghdl-mcode/bin/
+    - make ghdll-gcc
+    - make make ghdl_gcc
+    - make libs.vhdl.local_gcc
+    - make grt-all
+    - make install.vpi.local
+    - cd src/ortho/gcc
+    - touch Makefile.conf
+    - echo AGCC_GCCSRC_DIR=/path/to/gcc/sources > Makefile.con
+    - echo AGCC_GCCOBJ_DIR=/path/to/gcc/build >> Makefile.conf
+ #   - mkdir build-mcode
+ #   - cd build-mcode
+ #   - ../configure --prefix=../../install-ghdl-mcode/
+ #   - make
+ #   - make install
+ #   - cd ../../
+ #   - export PATH=$PATH:install-ghdl-mcode/bin/
+
 
 script: mvn clean install
 
