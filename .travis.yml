@@ -5,13 +5,18 @@ jdk:
 #test
 
 install:
-    - sudo apt-get -qq update
-    - sudo apt-get install gnat
-    - git clone --depth 1 https://github.com/ghdl/ghdl.git ghdl
-    - cd ghdl
-    - pwd
-    - mkdir build
-    - cd ..
+  - sudo apt-get install ghdl gtkwave
+  #  - sudo apt-get -qq update
+  #  - sudo apt-get install gnat
+  #  - git clone --depth 1 https://github.com/ghdl/ghdl.git ghdl
+  #  - cd ghdl
+  #  - pwd
+  #  - mkdir build
+  #  - cd build
+  #  - ../configure --with-gcc=/usr/lib/gcc --prefix=/usr
+  #  - make copy-sources
+  #  - mkdir gcc-objs; cd gcc-objs
+
 
 
   #  - make ghdl1-gcc
