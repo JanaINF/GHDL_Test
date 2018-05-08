@@ -9,8 +9,10 @@ install:
     - sudo apt-get install gnat
     - git clone --depth 1 https://github.com/ghdl/ghdl.git ghdl
     - cd ghdl
-    - ls -la
-    - cd ..
+    - pwd
+    - mkdir build
+    - cd build
+
   #  - make ghdl1-gcc
   #  - make make ghdl_gcc
   #  - make libs.vhdl.local_gcc
