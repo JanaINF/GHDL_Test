@@ -2,21 +2,22 @@ language: java
 
 jdk:
   - oraclejdk8
-#test
+
 
 install:
-  - sudo apt-get install ghdl gtkwave
-  #  - sudo apt-get -qq update
-  #  - sudo apt-get install gnat
-  #  - git clone --depth 1 https://github.com/ghdl/ghdl.git ghdl
-  #  - cd ghdl
+
+    - sudo apt-get -qq update
+    - sudo apt-get install gnat
+    - git clone --depth 1 https://github.com/ghdl/ghdl.git ghdl
+    - cd ghdl
+
+
   #  - pwd
   #  - mkdir build
   #  - cd build
   #  - ../configure --with-gcc=/usr/lib/gcc --prefix=/usr
   #  - make copy-sources
   #  - mkdir gcc-objs; cd gcc-objs
-
 
 
   #  - make ghdl1-gcc
@@ -30,13 +31,14 @@ install:
   #  - echo AGCC_GCCOBJ_DIR=/path/to/gcc/build >> Makefile.conf
 
 
- #   - mkdir build-mcode
- #   - cd build-mcode
- #   - ../configure --prefix=../../install-ghdl-mcode/
- #   - make
- #   - make install
- #   - cd ../../
- #   - export PATH=$PATH:install-ghdl-mcode/bin/
+    - mkdir build-mcode
+    - cd build-mcode
+#    - ../configure --prefix=../../install-ghdl-mcode/
+    - configure --prefix=/opt/ghdl
+    - make
+    - make install
+    - cd ../../
+    - export PATH=$PATH:install-ghdl-mcode/bin/
 
 
 script: mvn clean install
