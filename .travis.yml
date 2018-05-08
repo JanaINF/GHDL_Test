@@ -11,6 +11,7 @@ install:
     - cd ghdl
     - pwd
     - mkdir build
+    - cd ..
 
 
   #  - make ghdl1-gcc
