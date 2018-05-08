@@ -39,6 +39,7 @@ install:
     - make install
     - cd ../../
     - export PATH=$PATH:install-ghdl-mcode/bin/
+    - echo $PATH
 
 
 script: mvn clean install
