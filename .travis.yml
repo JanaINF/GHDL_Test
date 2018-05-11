@@ -10,15 +10,16 @@ install:
     - sudo apt-get install gnat
     - git clone --depth 1 https://github.com/ghdl/ghdl.git ghdl
     - cd ghdl
-    - ../configure --prefix=/usr/local
     - pwd
+#    - ../configure --prefix=/usr/local
+
 #    - mkdir build-mcode
 #    - cd build-mcode
 #    - ../configure --prefix=../../install-ghdl-mcode/
 #    - configure --prefix=/opt/ghdl
-    - make
-    - make install
-    - pwd
+#    - make
+ #   - make install
+  #  - pwd
     - cd ../../
     - export PATH=$PATH:/usr/local/ghdl/bin/
     - echo $PATH
