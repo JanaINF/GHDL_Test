@@ -19,7 +19,7 @@ install:
 #    - configure --prefix=/opt/ghdl
     - make
     - sudo make install
-    - cd ../../
+    - cd ../
     - export PATH=$PATH:/usr/local/install-ghdl-mcode/bin/
     - echo $PATH
 
