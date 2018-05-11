@@ -12,19 +12,18 @@ install:
     - git clone --depth 1 https://github.com/ghdl/ghdl.git ghdl
     - cd ghdl
     - mkdir install-ghdl-mcode
-    - cd .. 
+    - cd ..
     - pwd
-    - ./configure --prefix=/usr/local/install-ghdl-mcode
+    - ./configure --prefix=/usr/local/ghdl/install-ghdl-mcode
 
 #    - mkdir build-mcode
 #    - cd build-mcode
 #    - ../configure --prefix=../../install-ghdl-mcode/
 #    - configure --prefix=/opt/ghdl
-     - make
-     - make install
-  #  - pwd
+    - make
+    - make install
     - cd ../../
-    - export PATH=$PATH:/usr/local/install-ghdl-mcode/bin/
+    - export PATH=$PATH:/usr/local/ghdl/install-ghdl-mcode/bin/
     - echo $PATH
 
 
