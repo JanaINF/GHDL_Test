@@ -18,10 +18,10 @@ install:
   #  - export PATH=$PATH:/usr/local/install-ghdl-mcode/bin/
   #  - echo $PATH
     - wget https://github.com/ghdl/ghdl/archive/v0.35.tar.gz
-    - ls
-  #  - tar xzvf ghdl-0.35.tar.gz
-  #  - cd ghdl-0.35
-  #  - ./configure
+  #  - ls
+    - tar xzvf v0.35.tar.gz
+    - cd ghdl-0.35
+    - ./configure
 
 
 
