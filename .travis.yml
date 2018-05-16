@@ -8,21 +8,19 @@ install:
 
     - sudo apt-get -qq update
     - sudo apt-get install gnat
-    - git clone --depth 1 https://github.com/ghdl/ghdl.git ghdl
-    - cd ghdl
-    - pwd
-    - ./configure --prefix=/usr/local/install-ghdl-mcode
-
-#    - mkdir build-mcode
-#    - cd build-mcode
-#    - ../configure --prefix=../../install-ghdl-mcode/
-#    - configure --prefix=/opt/ghdl
-    - make
-    - sudo make install
-    - cd ../
-    - export PATH=$PATH:/usr/local/install-ghdl-mcode/bin/
-    - echo $PATH
-
+  #  - git clone --depth 1 https://github.com/ghdl/ghdl.git ghdl
+  #  - cd ghdl
+  #  - pwd
+  #  - ./configure --prefix=/usr/local/install-ghdl-mcode
+  #  - make
+  #  - sudo make install
+  #  - cd ../
+  #  - export PATH=$PATH:/usr/local/install-ghdl-mcode/bin/
+  #  - echo $PATH
+    - wget https://github.com/ghdl/ghdl/archive/v0.35.tar.gz
+    - tar xzvf ghdl-0.35.tar.gz
+    - cd ghdl-0.35
+    - ./configure
 
 
 
